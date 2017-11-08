@@ -46,15 +46,15 @@ Driver compilation:
  		 ARCH := arm 
 		 // point to the cross compilation tool chain, this will be available in the Buildroot directory. 
  		 CROSS_COMPILE := /home/***/buildroot-2017.05.2/output/host/usr/bin/arm-linux- 
-		 //select the correct version of linux version, will be avaaible in the buildroot directory
+		 //select the correct version of the linux version, it will be available in the buildroot directory
 		 KVER ?= linux4sam_5.5 
-		 //Point to the kernel source code, driver need a reference to the few kerenl headers. 
+		 //Point to the kernel source code, driver need a reference to the kernel headers. 
 		 KSRC ?= /home/vchagari/Dev/Buildroot/OTAAntenna/buildroot-2017.08.1/output/build/linux-$(KVER)
-		 //Directory where the driver source code is present, the compiled binaries will be avaiable in this directory.
+		 //Directory where the driver source code is present. The compiled binaries will be avaiable in this directory.
 		 MODDESTDIR := /home/vchagari/Dev/WiFi-Drivers/Realtek/Edimax-AC-1750/updated/EW7833UAC_linux_v4.3.21_17997.20160531/
 		 endif
 	c. If you want to work on another linux platform other than Buildroot, proceed the smiliar way. Add a label similar to CONFIG_PLATFORM_"***"=y.
 		and add the lines mentioned in the step b. 
 
-	d. make in the parent directory. 
+	d. do a make in the parent directory. 
 
